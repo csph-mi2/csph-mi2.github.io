@@ -1,0 +1,351 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+}
+
+html {
+    scrollbar-gutter: stable both-edges;
+}
+
+h1 {
+    font-weight: normal;
+    color: #00255f;
+}
+
+h2 {
+    text-indent: 0.3em;
+}
+
+h3 {
+    color: #00255f;
+    font-weight: bold;
+    padding-top: 20px;
+    text-indent: 0.3em;
+}
+
+h4 {
+    text-indent: 0.3em;
+}
+
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.5em;
+}
+sub {
+    bottom: -0.25em;
+}
+
+body {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgb(249, 249, 249);
+    color: rgb(62, 62, 62);
+    line-height: 1.6;
+    
+    height: 100vh;
+}
+
+header {
+    color: #00255f;
+    text-align: center;
+    vertical-align: middle;
+    justify-content: center;
+
+    margin-left: calc(calc(100% - 1100px) / 2);
+    margin-right: calc(calc(100% - 1100px) / 2);
+
+    /*border-bottom: 3px solid #00255f;*/
+    
+    /*width: 100%;*/
+}
+
+header img {
+    display: inline-block;
+    padding-top:20px;
+    height: 120px;
+    /*width: 100%;*/
+}
+
+/*header h2 {
+    text-align: center;
+}*/
+
+header h3 {
+    font-weight: normal;
+    padding-top: unset;
+    text-indent: 0px;
+}
+
+.container {
+    display: flex;
+    height: calc(100vh - 103px);
+
+    padding-top: 10px;
+    margin-left: max(calc(calc(100% - 1100px) / 2), 0px);
+    margin-right: max(calc(calc(100% - 1100px) / 2), 0px);
+}
+
+@media (max-width: 700px) {
+    .container {
+      flex-direction: column;
+    }
+}
+
+.container nav {
+    width: 140px;
+    text-align: center;
+}
+
+.container nav h1 {
+    background-color: #00255f;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: xx-large;
+}
+
+.container nav ul {
+    list-style-type: none;
+    
+    padding-bottom: 10px;
+    
+}
+
+.container nav ul li {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,1);
+}
+
+.container nav ul li a {
+    padding: 20px;
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+.container nav ul li:hover {
+    background-color: #00255f;
+}
+
+.container nav ul li:hover a {
+    color: white;
+    font-weight: bold;
+}
+
+.container .mainContent {
+    flex: 3;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/*.container .mainContent h2 {
+    color: #00255f;
+
+    font-weight: bold;
+    font-size: large;
+    padding-top: 10px;
+    text-indent: 1em;
+}*/
+
+.container .mainContent p {
+    
+    /*text-indent: 1em;*/
+    padding: 1em;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+.container .mainContent ul {
+    list-style-type: none;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.container .socialMedia {
+    width: 190px;
+}
+
+.container .socialMedia h3{
+    text-indent: unset;
+    padding-top: 0px;
+}
+
+
+.container .socialMedia table {
+    vertical-align: middle;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+.container .socialMedia .socialMediaLogo {
+    width: 25px;
+    height: 25px;
+}
+
+
+footer {
+    background-color: rgb(100, 100, 100);
+    color: white;
+    
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    bottom: 0px;
+    width: 100%;
+    height: 20px;
+    vertical-align: middle;
+    position: fixed;
+
+    color: #FFF;
+    font-size: small;
+    
+    
+}
+
+
+.slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 0px;
+    margin: 0px;
+    border-style: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.slides-container {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    list-style: none;;
+    overflow: scroll;
+    scroll-behavior: smooth;
+
+    padding: 0px;
+    margin: 0px;
+    border-style: hidden;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    flex: 1 0 100%;
+
+    padding: 0px;
+    margin: 0px;
+    border-style: hidden;
+}
+
+.slides-container {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+/* WebKit */
+.slides-container::-webkit-scrollbar { 
+    width: 0;
+    height: 0;
+}
+
+.slide-arrow {
+    position: absolute;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 4rem;
+    background-color: white;
+    border: none;
+    width: 2rem;
+    font-size: 3rem;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 100ms;
+}
+.slide-arrow:hover, .slide-arrow:focus {
+    opacity: 1;
+}
+
+#slide-arrow-prev {
+    left: 0;
+    padding-left: 0.25rem;
+    border-radius: 0 2rem 2rem 0;
+}
+
+#slide-arrow-next {
+    right: 0;
+    padding-left: 0.75rem;
+    border-radius: 2rem 0 0 2rem;
+}
+
+
+.teamTable {
+    width: 100%;
+    
+}
+
+.teamTable tr:nth-of-type(odd) {
+    background-color: #fcfcfc;
+}
+
+.teamTable tr {
+    padding: 0;
+    margin: 0;
+    border-style: none;
+    vertical-align: middle;
+}
+
+.teamTable td {
+    padding: 0;
+    margin: 0;
+    border-style: none;
+    vertical-align: middle;
+}
+
+.teamTable .clickableTr:hover {
+    background-color: rgba(0, 37, 95, 0.05);
+    cursor: pointer;
+}
+
+.citations {
+    background-color: white;
+    border-radius: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 25px;
+    font-size: small;
+}
+
+.citations tr td {
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+}
+
+.citations a {
+    color: inherit;
+    text-decoration: none; /* Removes underline */
+}
+
+.citations a:hover {
+    color:#00255f;
+    font-size: normal;
+}
