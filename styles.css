@@ -193,6 +193,10 @@ header h3 {
     padding: 0px;
 }
 
+.container .socialMedia table tr td a {
+    text-decoration: none;
+}
+
 .container .socialMedia .socialMediaLogo {
     width: 25px;
     height: 25px;
