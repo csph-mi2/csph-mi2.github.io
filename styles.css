@@ -63,16 +63,25 @@ header {
     margin-left: calc(calc(100% - 1100px) / 2);
     margin-right: calc(calc(100% - 1100px) / 2);
 
+    height: 140px;
+    width: 1100px;
     /*border-bottom: 3px solid #00255f;*/
     
     /*width: 100%;*/
 }
 
-header img {
-    display: inline-block;
-    padding-top:20px;
-    height: 120px;
+header .banner-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top:10px;
+    padding-bottom: 10px;
     /*width: 100%;*/
+}
+
+header .banner-title img {
+    height: 120px;
 }
 
 /*header h2 {
@@ -83,6 +92,33 @@ header h3 {
     font-weight: normal;
     padding-top: unset;
     text-indent: 0px;
+}
+
+header .banner-backdrop {
+    position: relative;
+    width: 1100px;
+    height: 140px;
+    z-index: -1;
+    background-color: #00255f;
+}
+
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    clip-path: polygon(50% 0%, 61% 20%, 98% 20%, 68% 40%, 79% 70%, 50% 55%, 21% 70%, 32% 40%);
+    transform-origin: center;
+}
+
+header .banner {
+    position: absolute;
+    top: 0;
+    background-image: url(images/headerBackground.png); 
+    background-size: 100% auto; 
+    background-position-y:-180px;
+    width: 1100px;
+    height: 140px;
+    filter: brightness(60%) saturate(80%) contrast(120%) 
 }
 
 .container {
