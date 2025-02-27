@@ -99,21 +99,21 @@ header .banner-backdrop {
     width: 1100px;
     height: 140px;
     z-index: -1;
-    background-color: #00255f;
+    background-color: rgb(249, 249, 249);
 }
 
-.star {
+/*.star {
     position: absolute;
     background-color: white;
     border-radius: 50%;
     clip-path: polygon(50% 0%, 61% 20%, 98% 20%, 68% 40%, 79% 70%, 50% 55%, 21% 70%, 32% 40%);
     transform-origin: center;
-}
+}*/
 
 header .banner {
     position: absolute;
     top: 0;
-    background-image: url(images/headerBackground.png); 
+    /*background-image: url(images/AI-PNG-Transparent_Dark.png); */
     background-size: 100% auto; 
     background-position-y:-180px;
     width: 1100px;
