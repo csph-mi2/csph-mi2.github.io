@@ -23,6 +23,10 @@ function processHash()
         for (var i = 0; i < scripts.length; i++) {
             eval(scripts[i].innerText);
         }
+
+        if (typeof hcaptcha !== 'undefined') {
+          hcaptcha.render(document.querySelector('.h-captcha'));
+        }
       }
       else if(client.readyState == 4)
       {
@@ -63,31 +67,5 @@ const myObserver = new ResizeObserver(entries => {
 });
 myObserver.observe(document.querySelector("body"));
 
-// Function to generate random stars
-function generateStars() {
-  const starContainer = document.querySelector('.banner-backdrop');
-  const numStars = 500;
-
-  for (let i = 0; i < numStars; i++) {
-      const star = document.createElement('div');
-      star.classList.add('star');
-
-      const size = Math.random() * 3.5 + 1;
-      star.style.width = `${size}px`;
-      star.style.height = `${size}px`;
-
-      star.style.left = `${Math.random() * 100}%`;
-      star.style.top = `${Math.random() * 100}%`;
-
-      star.style.opacity = `${Math.random() * 0.3 + 0.5}`;
-      star.style.transform = `rotate(${Math.random() * 360}deg)`;
-
-      starContainer.appendChild(star);
-  }
-}
-
 // Call the function when the page loads
-window.onload = function() {
-  generateStars();
-  processHash();
-}
+window.onload = processHash;
