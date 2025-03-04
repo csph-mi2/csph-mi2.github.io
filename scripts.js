@@ -30,7 +30,6 @@ function processHash()
 
         // Call updateCaptchaSize after loading the content
         if (typeof updateCaptchaSize === 'function') {
-          console.log("updateCaptchaSize is a function");
           updateCaptchaSize();
         }
       }
