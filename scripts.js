@@ -27,6 +27,11 @@ function processHash()
         if (typeof hcaptcha !== 'undefined') {
           hcaptcha.render(document.querySelector('.h-captcha'));
         }
+
+        // Call updateCaptchaSize after loading the content
+        if (typeof updateCaptchaSize === 'function') {
+          updateCaptchaSize();
+        }
       }
       else if(client.readyState == 4)
       {
