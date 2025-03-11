@@ -18,11 +18,13 @@
 
     <div class="container">
         <nav>
-            <ul>
+            <div class="dropdown-toggle" onmouseenter="dropdownOn()" onclick="dropdownOff()">Menu</div>
+            <ul onclick="dropdownOff()">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#team">Team</a></li>
                 <li><a href="#research">Research</a></li>
+                <li><a href="#codebase">Our Code</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -96,5 +98,19 @@
     <footer>Medical Imaging and Machine Intelligence @ University of Colorado | Anschutz Medical Campus</footer>
 
     <script src="scripts.js"></script>
+    <script>
+        function dropdownOn() {
+            const navUl = document.querySelector("nav ul");
+            if (!navUl.classList.contains("show")) {
+                navUl.classList.add("show");
+            }
+        }
+        function dropdownOff() {
+            const navUl = document.querySelector("nav ul");
+            if (navUl.classList.contains("show")) {
+                navUl.classList.remove("show");
+            }
+        }
+    </script>
 </body>
 </html>
