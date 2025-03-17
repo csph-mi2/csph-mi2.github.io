@@ -18,7 +18,7 @@
 
     <div class="container">
         <nav>
-            <div class="dropdown-toggle" onmouseenter="dropdownOn()" onclick="dropdownOff()">Menu</div>
+            <div class="dropdown-toggle" onclick="toggleDropdown()">Menu</div>
             <ul onclick="dropdownOff()">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -99,10 +99,13 @@
 
     <script src="scripts.js"></script>
     <script>
-        function dropdownOn() {
+        function toggleDropdown() {
             const navUl = document.querySelector("nav ul");
             if (!navUl.classList.contains("show")) {
                 navUl.classList.add("show");
+            }
+            else {
+                navUl.classList.remove("show");
             }
         }
         function dropdownOff() {

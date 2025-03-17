@@ -268,17 +268,42 @@ footer {
     
 }
 
+.github-projects {
+    padding-bottom: 30px;
+}
+
 .github-projects p {
     vertical-align: top;
     display: flex;
+    line-height: 1.2;
+    height: 100%;
+    margin: 10px 0;
 }
 
 .github-projects p img {
-    width: 50px;
-    height: 50px;
+    width: 80px;
     margin-right: 10px;
+    align-self: center;
 }
 
+.github-projects .citation {
+    font-size: small;
+    color:rgb(100, 100, 100);
+}
+
+.github-projects .citation:hover {
+    color: darkred;
+}
+
+.github-projects .project-title {
+    color: black;
+    text-decoration: none;
+    margin-bottom: 1em;
+}
+
+.github-projects .project-title:hover {
+    color: darkblue;
+}
 
 .slider-wrapper {
     position: relative;
@@ -419,6 +444,7 @@ footer {
 @media (max-width: 700px) {
     html {
         scrollbar-gutter: stable;
+        hyphens: auto;
     }
     body {
         height: auto;
