@@ -50,8 +50,9 @@ body {
     background-color: rgb(249, 249, 249);
     color: rgb(62, 62, 62);
     line-height: 1.6;
-    
     height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -59,33 +60,19 @@ header {
     text-align: center;
     vertical-align: middle;
     justify-content: center;
-
-    margin-left: calc(calc(100% - 1100px) / 2);
-    margin-right: calc(calc(100% - 1100px) / 2);
-
     height: 140px;
-    width: 1100px;
-    /*border-bottom: 3px solid #00255f;*/
-    
-    /*width: 100%;*/
 }
 
 header .banner-title {
     position: relative;
-    width: 1100px;
     height: 140px;
     padding-top:10px;
     padding-bottom: 10px;
-    /*width: 100%;*/
 }
 
 header .banner-title img {
     height: 120px;
 }
-
-/*header h2 {
-    text-align: center;
-}*/
 
 header h3 {
     font-weight: normal;
@@ -102,8 +89,9 @@ header .banner-backdrop {
 }
 
 .h-captcha {
+    max-width: 100%;
     width: 100%;
-    height: 100px;
+    height: auto;
 }
 
 header .banner {
@@ -119,21 +107,35 @@ header .banner {
 
 .container {
     display: flex;
-    height: calc(100vh - 103px);
-
+    height: auto;
     padding-top: 10px;
     margin-left: max(calc(calc(100% - 1100px) / 2), 0px);
     margin-right: max(calc(calc(100% - 1100px) / 2), 0px);
 }
 
-@media (max-width: 700px) {
-    .container {
-      flex-direction: column;
-    }
+.embedImg {
+    width: 250px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+#GroupStanding {
+    float: right; 
+    width: 350px; 
+    padding-left: 10px; 
+    padding-right: 10px; 
+    padding-top: 10px; 
+    margin: 10px auto 10x;
+}
+
+.dropdown-toggle {
+    display: none;
 }
 
 .container nav {
-    width: 190px;
+    max-width: 190px;
+    width: 100%;
     text-align: center;
 }
 
@@ -148,9 +150,7 @@ header .banner {
 
 .container nav ul {
     list-style-type: none;
-    
     padding-bottom: 10px;
-    
 }
 
 .container nav ul li {
@@ -184,18 +184,7 @@ header .banner {
     padding-right: 1rem;
 }
 
-/*.container .mainContent h2 {
-    color: #00255f;
-
-    font-weight: bold;
-    font-size: large;
-    padding-top: 10px;
-    text-indent: 1em;
-}*/
-
 .container .mainContent p {
-    
-    /*text-indent: 1em;*/
     padding: 1em;
     background-color: white;
     border-radius: 10px;
@@ -209,7 +198,9 @@ header .banner {
 }
 
 .container .socialMedia {
-    width: 190px;
+    max-width: 190px;
+    width: 100%;
+    min-width: 100px;
 }
 
 .container .socialMedia h3{
@@ -234,27 +225,56 @@ header .banner {
     height: 25px;
 }
 
-
 footer {
     background-color: rgb(100, 100, 100);
     color: white;
-    
     display: flex;
     text-align: center;
     justify-content: center;
     align-items: center;
     bottom: 0px;
+    left: 0px;
     width: 100%;
     height: 20px;
     vertical-align: middle;
     position: fixed;
-
     color: #FFF;
     font-size: small;
-    
-    
 }
 
+.github-projects p {
+    vertical-align: top;
+    display: flex;
+    line-height: 1.2;
+    height: 100%;
+    margin-top: 10px;
+}
+
+.github-projects p img {
+    width: 80px;
+    margin-right: 10px;
+    align-self: center;
+}
+
+.github-projects .citation {
+    font-size: small;
+    color:rgb(136, 136, 136);
+    text-decoration: none;
+}
+
+.github-projects .citation:hover {
+    color: darkred;
+}
+
+.github-projects .project-title {
+    color: black;
+    text-decoration: none;
+    margin-bottom: 1em;
+}
+
+.github-projects .project-title:hover {
+    color: darkblue;
+}
 
 .slider-wrapper {
     position: relative;
@@ -268,7 +288,9 @@ footer {
 }
 
 .slides-container {
-    height: 200px;
+    height: 20vw;
+    max-height: 200px;
+    min-height: 80px;
     width: 100%;
     display: flex;
     list-style: none;;
@@ -333,10 +355,8 @@ footer {
     border-radius: 2rem 0 0 2rem;
 }
 
-
 .teamTable {
     width: 100%;
-    
 }
 
 .teamTable tr:nth-of-type(odd) {
@@ -378,10 +398,160 @@ footer {
 
 .citations a {
     color: inherit;
-    text-decoration: none; /* Removes underline */
+    text-decoration: none;
 }
 
 .citations a:hover {
     color:#00255f;
     font-size: normal;
+}
+
+#message {
+    resize: none;
+}
+
+@media (max-width: 700px) {
+    html {
+        scrollbar-gutter: stable;
+        hyphens: auto;
+    }
+
+    body {
+        height: auto;
+    }
+
+    h3 {
+        text-indent: 0;
+    }
+
+    h4 {
+        text-indent: 0;
+    }
+
+    header {
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+        height: auto;
+    }
+
+    header .banner-title {
+        width: auto;
+        max-width: inherit;
+        height: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    header .banner-title img {
+        width: auto;
+        max-width: inherit;
+        height: auto;
+    }
+
+    .container {
+        flex-direction: column;
+        height: 100%;
+        min-height: 100%;
+        padding: 0 10px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .container nav {
+        width: 100%;
+        max-width: 100%;
+        display: block;
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+
+    .container nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+
+    .container nav ul.show {
+        display: flex;
+    }
+
+    .container nav ul li {
+        margin: 0;
+        text-align: center;
+    }
+
+    .container nav ul li a {
+        padding: 10px;
+        font-size: small;
+    }
+
+    .dropdown-toggle {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+        background-color: #00255f;
+        color: white;
+        text-align: center;
+        max-width: 100%;
+        margin-bottom: auto;
+        border-radius: 5px;
+    }
+
+    .container .mainContent {
+        padding: 0;
+    }
+
+    .container .socialMedia {
+        max-width: 100%;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .container .socialMedia table {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .container .socialMedia table td {
+        text-align: center;
+    }
+
+    #GroupStanding {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .embedImg {
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    footer {
+        font-size: x-small;
+        padding: 5px 0;
+        position: relative;
+    }
+
+    .teamTable td img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .teamTable td {
+        padding-left: 5px;
+    }
+
+    .citations td {
+        padding: 5px;
+    }
+
+    .citations a {
+        font-size: small;
+    }
 }
