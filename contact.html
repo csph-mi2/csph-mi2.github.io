@@ -50,12 +50,23 @@
 
   form.addEventListener("submit", function(event) {
     event.preventDefault();
+      
+    // Get hCaptcha response token
+    const hCaptchaResponse = document.querySelector('textarea[name="h-captcha-response"]').value;
+    if (!hCaptchaResponse) {
+      errorMessage.style.display = "block";
+      errorMessage.textContent = "Please complete the hCaptcha.";
+      return;
+    }
 
     const formData = new FormData(form);
 
     fetch(form.action, {
       method: "POST",
-      body: formData
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
     })
     .then(response => {
       if (response.ok) {
