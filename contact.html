@@ -70,6 +70,7 @@
     })
     .then(response => {
       if (response.ok) {
+        errorMessage.style.display = "none";
         successMessage.style.display = "block";
         form.reset();
       } else {
