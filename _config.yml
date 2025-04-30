@@ -21,6 +21,7 @@
 title: CU Medical Imaging and Machine Intelligence Lab
 email: cuanschutz.mi2.lab.bot@gmail.com
 description: The Medical Imaging and Machine Intelligence (MI2) initiative at the University of Colorado Anschutz Medical Campus combines machine learning, advanced medical imaging, and 3D photogrammetry to revolutionize healthcare. Our research focuses on improving the diagnosis and treatment of medical conditions using cutting-edge AI technologies, with an emphasis on CT imaging. Committed to scientific excellence, integrity, diversity, and equity, MI2 fosters collaboration to make healthcare more accurate, objective, and accessible for all.
+keywords: medical imaging, machine intelligence, Colorado, CU, Anschutz, medical campus, Aurora, machine learning, AI, ML, CT imaging, photogrammetry, healthcare, research, MI2
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mi2.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
